@@ -1,0 +1,76 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: gray;
+}
+
+.header,
+.footer {
+  height: 300px;
+  position: relative;
+  overflow:  hidden;
+}
+
+.header h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  margin:0;
+  padding-top: 40px;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+}
+
+.header__skrewed {
+  height: inherit;
+  transform: skewY(-6deg);
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+.header__zoom, 
+.footer__zoom {    
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  
+  z-index: 1;
+
+  background-image: url("https://avatars.mds.yandex.net/get-pdb/225396/650ad45b-b898-4279-a69e-a7f35ff56e56/s1200");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+  animation: scale 20s linear infinite;
+}
+
+.content-wrapper {
+  text-align: center;
+  height: auto;
+  margin: 40px auto;
+}
+
+section p {
+  display: inline-block;
+  text-align: justify;
+  width: 25%;
+  padding: 0 35px;
+}
+
+.footer__skrewed {
+  height: inherit;
+  transform: skewY(6deg);
+  transform-origin: bottom left;
+  overflow: hidden;
+}
+
+.footer__zoom {
+  background-image: url(https://cdn.fishki.net/upload/post/201512/09/1769246/tn/super-aboi-47.jpg);
+}
+
+@keyframes scale {50% {transform: scale(1.2); }}
